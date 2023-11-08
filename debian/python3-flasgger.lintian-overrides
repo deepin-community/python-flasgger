@@ -1,0 +1,6 @@
+# We use jquery.js from Debian package. It is located in /usr/share hence this traversal.
+#python3-flasgger: ldconfig-escape usr/lib/python3/dist-packages/flasgger/ui3/static/lib/jquery.min.js -> usr/share/javascript/jquery/jquery.min.js
+#python3-flasgger: ldconfig-escape usr/lib/python3/dist-packages/flasgger/ui3/static/lib/jquery.min.map -> usr/share/javascript/jquery/jquery.min.map
+# This file encoding is "text/plain; charset=utf-16be" as its name suggests. 
+python3-flasgger: national-encoding [usr/share/doc/python3-flasgger/examples/username_specs_utf16.yml]
+

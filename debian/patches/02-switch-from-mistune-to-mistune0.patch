@@ -1,0 +1,36 @@
+Description: python3-mistune is a dependency for this package. It reached 2.0.0 release and is no longer backward compatible with 0.8.4. We need to switch -hopefully temporarily- to mistune0 that contains mistune 0.8.4 release.
+Author: Marcos Fouces <marcos@debian.org>
+Bug-Debian: https://bugs.debian.org/1003568
+Forwarded: not-needed 
+
+--- a/flasgger.egg-info/requires.txt
++++ b/flasgger.egg-info/requires.txt
+@@ -1,5 +1,5 @@
+ Flask>=0.10
+ PyYAML>=3.0
+ jsonschema>=3.0.1
+-mistune
++mistune0
+ six>=1.10.0
+--- a/flasgger/base.py
++++ b/flasgger/base.py
+@@ -31,7 +31,7 @@
+ except ImportError:
+     RequestParser = None
+ import jsonschema
+-from mistune import markdown
++from mistune0 import markdown
+ from .constants import OPTIONAL_FIELDS, OPTIONAL_OAS3_FIELDS
+ from .utils import extract_definitions
+ from .utils import get_specs
+--- a/setup.py
++++ b/setup.py
+@@ -53,7 +53,7 @@
+         'Flask>=0.10',
+         'PyYAML>=3.0',
+         'jsonschema>=3.0.1',
+-        'mistune',
++        'mistune0',
+         'six>=1.10.0'
+     ],
+     classifiers=[
