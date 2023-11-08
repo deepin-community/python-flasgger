@@ -1,0 +1,4 @@
+# We replace the embedded jquery with symlinks to the packaged version
+source-is-missing [flasgger/ui3/static/lib/jquery.min.js]
+# Sources are provided in debian/missing-sources/swagger-ui_*.tar.gz
+source-is-missing [flasgger/ui3/static/swagger*]

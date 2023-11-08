@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
-
+export PYBUILD_NAME=flasgger
 %:
-	dh $@
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian -name '.DS_Store' -delete
+
+override_dh_fixperms:
+	dh_fixperms
+	find debian -name 'favicon.ico' -exec chmod 0644 {} +
