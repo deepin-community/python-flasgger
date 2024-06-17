@@ -3,16 +3,30 @@ Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Marcos Fouces <marcos@debian.org>
 Section: python
 Priority: optional
-Build-Depends: dh-python, python3-setuptools, python3-all, debhelper-compat (=13), python3-jsonschema, python3-flask, python3-yaml, python3-mistune0, python3-six, libjs-jquery
-Standards-Version: 4.6.1
+Build-Depends:
+ debhelper-compat (=13),
+ dh-python,
+ python3-all,
+ python3-flask,
+ python3-jsonschema,
+ python3-mistune,
+ python3-pytest,
+ python3-setuptools,
+ python3-yaml,
+ libjs-jquery
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
-Homepage: https://github.com/nicobatty/flasgger/
+Testsuite: autopkgtest-pkg-pybuild
+Homepage: https://github.com/flasgger/flasgger/
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-flasgger.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-flasgger
 
 Package: python3-flasgger
 Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}, python3-jsonschema, python3-flask, python3-yaml, python3-mistune0, python3-six, libjs-jquery
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ libjs-jquery
 Description: Extract swagger specs from your flask project
  Flasgger is a Flask extension to extract OpenAPI-Specification from all
  Flask views registered in your API.

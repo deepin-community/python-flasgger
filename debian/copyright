@@ -14,7 +14,7 @@ Comment:
  source code available.
 
 Files: *
-Copyright: 2014-2019 Bruno Rocha
+Copyright: 2014 Bruno Rocha
 License: Expat
 
 Files: flasgger/ui3/static/lib/jquery*
@@ -42,7 +42,9 @@ Comment:
  notices are preserved in the files themselves.
 
 Files: debian/*
-Copyright: 2019-2022 Marcos Fouces <marcos@debian.org>
+Copyright:
+ 2019-2022 Marcos Fouces <marcos@debian.org>
+ 2023 Jeroen Ploemen <jcfp@debian.org>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -78,4 +80,3 @@ License: Expat
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-

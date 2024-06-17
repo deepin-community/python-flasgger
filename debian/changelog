@@ -1,3 +1,41 @@
+python-flasgger (0.9.7.2~dev2+dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+  * Revert to regular "mistune" now that just works,
+    "mistune0" is not needed anymore.
+
+ -- Alexandre Detiste <tchet@debian.org>  Sun, 02 Jun 2024 00:27:19 +0200
+
+python-flasgger (0.9.7.2~dev2+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * cherry-pick upstream patch to remove python3-six dependency
+
+ -- Alexandre Detiste <tchet@debian.org>  Fri, 05 Jan 2024 16:26:15 +0100
+
+python-flasgger (0.9.7.2~dev2+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.9.7.2~dev2+dfsg. (Closes: #1056450, #1056520,
+    #1058121, #1058156, #1056409, #1056536, #1056448)
+  * Watch: unbreak.
+  * Add d/gbp.conf.
+  * Copyright:
+    + correct upstream years to match the included LICENSE file.
+    + add myself for the packaging.
+  * Control:
+    + set Homepage to actual upstream project, not some fork.
+    + order build-deps; add python3-pytest.
+    + bump Standards-Version to 4.6.2 (from 4.6.1; no further changes).
+    + enable autopkgtest via Testsuite: autopkgtest-pkg-pybuild.
+    + remove unnecessary hardcoded python deps from the binary pkg.
+  * Rules:
+    + switch overrides to execute_after.
+    + ignore test_examples, needs unavailable flex module.
+  * Patches: refresh 02.
+
+ -- Jeroen Ploemen <jcfp@debian.org>  Tue, 12 Dec 2023 11:43:09 +0000
+
 python-flasgger (0.9.5+dfsg.2-3) unstable; urgency=medium
 
   [ Debian Janitor ]
